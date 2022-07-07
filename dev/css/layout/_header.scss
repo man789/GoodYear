@@ -58,10 +58,17 @@
     font-style: italic;
   }
 }
+.header__video {
+  display: none;
+}
 .header__video{
   margin-top: 2%;
   padding: 0 2% 0 2%;
   position: relative;
+  // mq to make video transition
+  @media screen and (min-width: 992px) {
+    display: block;
+  }
   &__sound{
     position: absolute;
     bottom: -20px;
