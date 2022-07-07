@@ -62,6 +62,13 @@ gulp.task('imageTransfer', function(){
     .pipe(gulp.dest('prod/img'));
 });
 
+// Transferer les fonts en prod
+gulp.task('fontTransfer', function () {
+  return gulp.src('dev/font/**')
+    // le dossier destination du fichier
+    .pipe(gulp.dest('prod/font'));
+});
+
 // Static server
 gulp.task('browser-sync', function() {
   browserSync.init({
@@ -75,7 +82,7 @@ gulp.task('browser-sync', function() {
 // 3. Exécution des tâches
 // -----------------------
 
-gulp.task('observation', gulp.parallel('browser-sync', 'sassification', 'htmlification','jsification', 'imageTransfer', function(){
+gulp.task('observation', gulp.parallel('browser-sync', 'sassification', 'htmlification', 'jsification', 'imageTransfer', 'fontTransfer', function(){
   gulp.watch('dev/css/**/*.scss', gulp.series('sassification'));
   gulp.watch('dev/*.html', gulp.series('htmlification'));
   gulp.watch('dev/js/*.js', gulp.series('jsification'));
