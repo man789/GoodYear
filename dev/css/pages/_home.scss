@@ -1,5 +1,6 @@
 .main{
-  padding: 5%;
+  padding: 5% 0;
+  background-color: #F6F6F6;
 }
 .service{
   &__single{
@@ -8,14 +9,76 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-bottom: 60px;
     >div:nth-of-type(1){
-      width: 200px;
+      max-width: 200px;
+      width: 100%;
+      position: relative;
       img{
         width: 100%;
       }
+      &::before{
+        content: '';
+        width: 3px;
+        height: 50px;
+        background-color: $blue;
+        border: none;
+        border-radius: 3px;
+        position: absolute;
+        bottom: -54px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%)
+      }
+    }
+    >div:nth-of-type(2) {
+      max-width: 900px;
+      width: 100%;
+      margin-left: 5rem;
+    }
+  }
+  &__single:nth-of-type(4){
+    >div:nth-of-type(1) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  h3{
+    color: $blue;
+    font-size: 1.875rem;
+    letter-spacing: 0.075rem;
+    margin: 0;
+  }
+  p{
+    font-size: 1rem;
+    letter-spacing: 0.031rem;
+    color: $text;
+  }
+  a{
+    color: $link;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+  .btn__service {
+    color: $black;
+    font-weight: 700;
+    font-size: 1.125rem;
+    letter-spacing: 0.035rem;
+    text-decoration: none;
+    background-color: $yellow;
+    border-radius: 40px;
+    padding: 12px 32px;
+    display: block;
+    width: fit-content;
+    border: 1px solid $yellow; 
+    transition: .3s all ease-in-out;
+    &:hover{
+      background-color: transparent;
     }
   }
 }
 
-
+.ask{
+  background: url('../img/formbg.png') center/cover, #0055A4;
+}
