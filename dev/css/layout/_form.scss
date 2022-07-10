@@ -3,11 +3,62 @@
   flex-wrap: wrap;
   &__left{
     width: 50%;
-    padding: 0 3%;
+    padding: 0 3% 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    // Styling input file section
+    >div:nth-of-type(1), >div:nth-of-type(2),>div:nth-of-type(3){
+      position: relative;
+      width: 450px;
+      height: 150px;
+      background-color: rgba($color: #000000, $alpha: 0.11);
+      border-radius: 10px;
+      padding: 2%;
+      margin-bottom: 5%;
+      .border{
+        border: 1px solid $white;
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        padding: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >div:nth-of-type(1){
+          margin-right: 5%;
+        }
+        >div:nth-of-type(2){
+          width: 65%;
+        }
+        h4{
+          font-size: 1rem;
+          color: $white;
+          text-transform: uppercase;
+          margin: 0;
+        }
+        p{
+          color: $white;
+          font-size: 0.813rem;
+          line-height: 1.1rem;
+          font-weight: 100;
+          margin: 5px 0 0 0;
+        }
+      }
+      label{
+        cursor: pointer;
+        
+      }
+      input{
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+      }
+    }
   }
   &__right {
     width: 50%;
-    padding: 0 3%;
+    padding: 0 0 0 3%;
     display: flex;
     flex-wrap: wrap;
     >div:nth-of-type(1),>div:nth-of-type(2),>div:nth-of-type(7),>div:nth-of-type(8),>div:nth-of-type(9),>div:nth-of-type(10){
@@ -18,7 +69,6 @@
     }
     >div{
       margin-bottom: 5%;
-      padding: 0 5%;
     }
   }
   input,select{

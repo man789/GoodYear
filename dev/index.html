@@ -102,13 +102,48 @@
         <form action="" class="form">
           <div class="form__left">
             <div>
-              <input type="file" name="bill" id="" required>
+              <label for="bill">
+                <div class="border">
+                  <div>
+                    <img src="img/form1.png" alt="Facture">
+                  </div>
+                  <div>
+                    <h4>Ajoutez votre facture</h4>
+                    <p><span class="yellow">Glissez ici une copie de votre facture</span> <br>(PDF, JPG ou PNG inférieur à 2 Mo).</p>
+                  </div>
+                </div>
+              </label>
+              <input type="file" name="bill" id="bill" required>
             </div>
             <div>
-              <input type="file" name="tire" id="" required>
+              <label for="tire">
+                <div class="border">
+                  <div>
+                    <img src="img/form2.png" alt="Pneu">
+                  </div>
+                  <div>
+                    <h4>AJOUTER UNE PHOTO
+                      de l’un des pneus achetés</h4>
+                    <p><span class="yellow">Logo SoundComfort visible</span> <br>(PDF, JPG ou PNG inférieur à 2 Mo).</p>
+                  </div>
+                </div>
+              </label>
+              <input type="file" name="tire" id="tire" required>
             </div>
             <div>
-              <input type="file" name="car" id="" required>
+              <label for="car">
+                <div class="border">
+                  <div>
+                    <img src="img/form3.png" alt="Voiture">
+                  </div>
+                  <div>
+                    <h4>AJOUTER UNE PHOTO DE VOTRE VÉHICULE</h4>
+                    <p>
+                      <span class="yellow">Plaque d’immatriculation lisible</span> <br>(PDF, JPG ou PNG inférieur à 2 Mo).</p>
+                  </div>
+                </div>
+              </label>
+              <input type="file" name="car" id="car" required>
             </div>
             <div>
               <select id="cars" name="cars" required>
@@ -163,7 +198,13 @@
             </div>
           </div>
           <div class="form__bottom">
-          <input type="submit" value="Submit">
+            <div>
+              <label for="offer">J’ai lu et je comprends les conditions de l’offre.</label>
+              <input type="checkbox" name="offer" id="offer">
+            </div>
+            <div>
+              <input type="submit" value="Submit">
+            </div>
           </div>
         </form>
       </div>
