@@ -18,12 +18,13 @@
         <img src="img/Logo.png" alt="GoodYear || Made to feel good">
       </div>
       <div class="main__nav__links">
-        <a href="#">Vers goodyear.eu</a>
-        <a href="#"><img src="img/map.svg" alt="map">Trouver un revendeur</a>
-        <a href="#">FR</a>
+        <a href="#" class="nav__link">Vers goodyear.eu</a>
+        <a href="#" class="nav__link"><img src="img/map.svg" alt="map">Trouver un revendeur</a>
+        <a href="#" class="nav__link">FR</a>
       </div>
     </div>
   </nav>
+  <div class="bg__burger"></div>
   <header class="header">
     <div class="wrapper">
       <div class="header__box">
@@ -49,7 +50,9 @@
   </header>
   <main class="main">
     <section class="video__mq">
-      <!-- Header Video Container -->
+      <div class="main__video">
+        <!-- Header Video Container -->
+      </div>
     </section>
     <section class="service">
       <div class="service__single">
@@ -113,7 +116,7 @@
                   </div>
                 </div>
               </label>
-              <input type="file" name="bill" id="bill" required>
+              <input type="file" name="bill" id="bill">
             </div>
             <div>
               <label for="tire">
@@ -128,7 +131,7 @@
                   </div>
                 </div>
               </label>
-              <input type="file" name="tire" id="tire" required>
+              <input type="file" name="tire" id="tire">
             </div>
             <div>
               <label for="car">
@@ -143,73 +146,102 @@
                   </div>
                 </div>
               </label>
-              <input type="file" name="car" id="car" required>
+              <input type="file" name="car" id="car">
             </div>
-            <div>
-              <select id="cars" name="cars" required>
-                <option value="" disabled selected hidden>Où avez-vous vu notre promotion pour la première fois ?</option>
+            <div class="select-left">
+              <span class="arrow-select"></span>
+              <select id="cars" name="cars">
+                <option value="" disabled selected hidden >Où avez-vous vu notre promotion pour la première fois ?</option>
                 <option value="facebook">Facebook</option>
                 <option value="others">autres</option>
               </select>
+              <span class="yellow">*</span>
             </div>
           </div>
           <div class="form__right">
             <div class="input-placeholder">
-              <input type="text" name="firstname" id="firstname" required placeholder="Nom">
+              <input type="text" name="firstname" id="firstname" placeholder="Nom">
               <div class="placeholder">
-                <span>Nom</span> <span>*</span>
+                <span></span> <span>*</span>
               </div>
             </div>
             <div class="input-placeholder">
-              <input type="text" name="lastname" id="lastname" required placeholder="Prénom">
+              <input type="text" name="lastname" id="lastname" placeholder="Prénom">
               <div class="placeholder">
-                <span>Prénom</span> <span>*</span>
+                <span></span> <span>*</span>
               </div>
             </div>
-            <div>
-              <input type="email" name="email" id="email" required placeholder="Adresse e-mail">
+            <div class="input-placeholder">
+              <input type="email" name="email" id="email" placeholder="Adresse e-mail">
+              <div class="placeholder">
+                <span></span> <span>*</span>
+              </div>
             </div>
-            <div>
-              <input type="email" name="confirm-email" id="confirm-email" required placeholder="Confirmer votre adresse e-mail">
+            <div class="input-placeholder">
+              <input type="email" name="confirm-email" id="confirm-email" placeholder="Confirmer votre adresse e-mail">
+              <div class="placeholder">
+                <span></span> <span>*</span>
+              </div>
             </div>
-            <div>
-              <input type="text" name="car-id" id="car-id" required placeholder="Numéro de plaque d'immatriculation">
+            <div class="input-placeholder">
+              <input type="text" name="car-id" id="car-id" placeholder="Numéro de plaque d'immatriculation">
+              <div class="placeholder">
+                <span></span> <span>*</span>
+              </div>
             </div>
-            <div>
-              <input type="text" name="address" id="address" required placeholder="Adresse postal">
+            <div class="input-placeholder">
+              <input type="text" name="address" id="address" placeholder="Adresse postal">
+              <div class="placeholder">
+                <span></span> <span>*</span>
+              </div>
             </div>
-            <div>
-              <input type="tel" name="tel" id="tel" required placeholder="Numéro">
+            <div class="input-placeholder">
+              <input type="tel" name="tel" id="tel" placeholder="Numéro">
+              <div class="placeholder">
+                <span></span> <span>*</span>
+              </div>
             </div>
-            <div>
-              <input type="text" name="postal" id="postal" required placeholder="Code postal">
+            <div class="input-placeholder">
+              <input type="text" name="postal" id="postal" placeholder="Code postal">
+              <div class="placeholder">
+                <span></span> <span>*</span>
+              </div>
             </div>
-            <div>
-              <input type="text" name="city" id="city" required placeholder="Ville">
+            <div class="input-placeholder">
+              <input type="text" name="city" id="city" placeholder="Ville">
+              <div class="placeholder">
+                <span></span> <span>*</span>
+              </div>
             </div>
-            <div>
-              <select id="country" name="country" required>
+            <div class="select-right">
+              <span class="arrow-select"></span>
+              <select id="country" name="country">
                 <option value="" disabled selected hidden>Pays</option>
                 <option value="belgique">Belgique</option>
                 <option value="france">France</option>
                 <option value="luxembourg">Luxembourg</option>
-                <option value="hollande">Hollande</option>
               </select>
+              <span class="yellow">*</span>
             </div>
           </div>
           <div class="form__bottom">
             <div>
-              <label for="offer">J’ai lu et je comprends les conditions de l’offre.</label>
-              <input type="checkbox" name="offer" id="offer">
+              <label class="container">J’ai lu et je comprends les conditions de l’offre.
+                <input type="checkbox" name="offer" id="offer">
+                <span class="checkmark"></span>
+              </label>
             </div>
             <div>
-              <input type="submit" value="Submit">
+              <input type="submit" value="Envoyer la demande">
             </div>
           </div>
         </form>
       </div>
     </section>
   </main>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/script.min.js"></script>
 </body>
 </html>

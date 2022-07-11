@@ -14,11 +14,40 @@
   }
   &__logo{
     margin-right: auto;
+    @media screen and (max-width: 991px) {
+      margin-left: 5%;
+    }
   }
   &__links{
     display: flex;
     gap: 2rem;
     height: 95px;
+    @media screen and (max-width: 991px) {
+      display: none;
+      position: fixed;
+      width: 90%;
+      height: 100vh;
+      top: 0;
+      right: -100%;
+      background-color: $blue;
+      z-index: 10;
+      flex-direction: column;
+      a:nth-of-type(1),a:nth-of-type(2){
+        border-bottom: 1px solid #0e487b;
+        padding-bottom: 5%;
+      }
+      a:nth-of-type(2){
+        margin-bottom: auto;
+      }
+      a:nth-of-type(3){
+        padding-bottom: 5%;
+      }
+      a{
+        padding-top: 5%;
+        padding-left: 5%;
+        border-left: none !important;
+      }
+    }
     a{
       font-size: 1rem;
       color: $yellow;
@@ -33,5 +62,49 @@
     a:nth-of-type(3){
       font-weight: 700;
     }
+  }
+}
+@media screen and (max-width: 991px) {
+  .burger__nav{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    cursor: pointer;
+    span{
+      height: 3px;
+      width: 90%;
+      border: none;
+      background-color: $white;
+      border-radius: 3px;
+    }
+    
+  }
+  .active{
+    display: flex;
+    right: 0;
+  }
+}
+.burger-active{
+  left: 20px;
+}
+@media screen and (max-width: 991px){
+  .bg__burger{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+  .d-block{
+    display: block;
   }
 }

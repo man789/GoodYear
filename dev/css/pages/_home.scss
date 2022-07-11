@@ -2,6 +2,18 @@
   padding: 5% 0 0 0;
   background-color: #F6F6F6;
 }
+@media screen and (max-width: 991px) {
+  .video__mq{
+    margin: 10% auto;
+  }
+  .main__video{
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+  }
+}
+
+
 .service{
   &__single{
     max-width: 1100px;
@@ -30,11 +42,17 @@
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%)
       }
+      @media screen and (max-width: 991px){
+        display: none;
+      }
     }
     >div:nth-of-type(2) {
       max-width: 900px;
       width: 100%;
       margin-left: 5rem;
+      @media screen and (max-width: 991px){
+        width: 80%;
+      }
     }
   }
   &__single:nth-of-type(4){
@@ -88,6 +106,9 @@
     max-width: 1100px;
     width: 100%;
     margin: 0 auto 70px;
+    @media screen and (max-width: 991px){
+      width: 80%;
+    }
     h3{
       font-size: 1.875rem;
       font-weight: 700;
