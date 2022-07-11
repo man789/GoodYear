@@ -76,6 +76,7 @@
     @media screen and (max-width: 991px){
       width: 100%;
       align-items: center;
+      align-content: center;
       flex-direction: column;
       padding: 0;
     }
@@ -157,7 +158,7 @@
 .input-placeholder {
   position: relative;
   @media screen and (max-width: 991px){
-    width: 50% !important;
+    width: 70% !important;
     align-items: center;
     margin: 0 0 10% 0 !important;
   }
@@ -278,7 +279,7 @@ select {
   border-bottom: 2px solid #fff;
   align-items: center;
   @media screen and (max-width: 991px){
-    width: 50% !important;
+    width: 70% !important;
     margin: 0 0 10% 0 !important;
   }
 }
@@ -339,10 +340,7 @@ input:focus, select:focus, textarea:focus, button:focus {
   margin:0 0;
   padding:0 0;
   list-style:none;
-  background-color:transparent;
-  -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+  background-color:rgba($color: $blue, $alpha: 1);
 }
 .options li {
   padding:0 6px;
