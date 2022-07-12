@@ -227,7 +227,7 @@
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: #2196F3;
 }
 
 /* When the checkbox is checked, add a blue background */
@@ -341,6 +341,7 @@ input:focus, select:focus, textarea:focus, button:focus {
   padding:0 0;
   list-style:none;
   background-color:rgba($color: $blue, $alpha: 1);
+  width: fit-content;
 }
 .options li {
   padding:0 6px;

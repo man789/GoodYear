@@ -38,11 +38,17 @@
   justify-content: center;
   position: relative;
   z-index: 4;
+  @media screen and (max-width: 992px) {
+    justify-content: flex-start;
+  }
 }
 .header__content{
   display: flex;
   justify-content: space-between;
   padding: 0 2%;
+  @media screen and (max-width: 992px) {
+    padding-top: 20%;
+  }
   h1{
     color: $white;
     margin: 0;

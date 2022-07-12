@@ -1,3 +1,4 @@
+// Display div 
 const video = document.querySelector('.header__video').innerHTML;
 const mobileDiv = document.querySelector('.main__video');
 
@@ -17,21 +18,33 @@ window.addEventListener('resize', () => {
   displayMobileForm();
 });
 
+// Responsive Menu
 let burger = document.querySelector('.burger__nav');
 let menu = document.querySelector('.main__nav__links');
 let link = document.querySelectorAll('.nav__link');
 let bg = document.querySelector('.bg__burger');
+let logo = document.querySelector('.main__nav__logo');
 
-function hasClick(){
+const clickMenu = () => {
   menu.classList.toggle("active");
   burger.classList.toggle("burger-active");
   bg.classList.toggle('d-block');
-}
-burger.addEventListener("click", hasClick);
-for(i=0; i<link.length; i++){
-  link[i].addEventListener("click", hasClick)
-}
+  logo.classList.toggle('visible');
+};
 
+burger.addEventListener('click', () => {
+  clickMenu();
+});
+
+bg.addEventListener('click', () => {
+  clickMenu();
+});
+
+for(i=0; i<link.length; i++){
+  link[i].addEventListener('click', () => {
+    clickMenu();
+  });
+}
 
 // Select JQuery
 
